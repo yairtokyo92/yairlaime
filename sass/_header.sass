@@ -1,0 +1,88 @@
+header
+    width: 100%
+    z-index: 100
+    position: fixed
+    .navigation
+        width: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: row-reverse
+        background-color:#fff
+        position: relative
+        border-bottom: 1px solid #eee
+    // box-shadow: 0 1px 10px 5px #bbb
+
+    #btn-menu
+        display: none
+    #btn-menu:checked ~ .menu
+        margin: 0
+    .btn-menu
+        padding: 1em
+        margin-right: .4em 
+        .icon-burger
+            cursor: pointer
+            font-size: 2em
+            color: $primaryColor
+        .icon-burger:hover
+            color: $textos
+    .logo
+        margin-right: auto
+        text-decoration: none
+        color: $primaryColor
+        font-size: 1.5em
+        padding-left: 1em
+        font-weight: 600
+.menu
+    position: absolute
+    width: 100%
+    top: 100%
+    right: 0
+    margin-top: -100%
+    list-style: none
+    transition: .2s
+    z-index: -10
+    label
+        cursor: pointer
+        display: block
+        padding: .8em
+        background-color: $backgroundStandard
+        color: $grayNavColor
+        font-weight: 500      
+        span
+            float: right
+            font-size: 1.5em
+            vertical-align: middle
+            position: relative
+            bottom: 
+            margin-right: .7em
+    label::selection
+        background-color: transparent  
+    label:hover 
+        color: $primaryColor
+    [class*="input-"]:checked + .sub-menu-sobremi
+        display: block
+    .input-sobremi
+        display: none 
+    ul
+        display: none
+        li
+            background-color: #fff
+            a
+                margin-left: 2em 
+                border: none
+            a::selection
+                background-color: transparent     
+    a
+        text-decoration: none
+        padding: .8em
+        width: 100%
+        display: flex
+        background-color: $backgroundStandard
+        color: $grayNavColor
+    a:hover
+        color: $primaryColor
+    span 
+        margin-right: 10px
+    .menu-five,.menu-item-trhee
+        font-weight: 500
